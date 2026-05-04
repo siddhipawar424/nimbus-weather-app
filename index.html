@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163624.png">
+</head>
+<body>
+
+<div class="card">
+
+    <div class="search">
+        <input type="text" placeholder="Enter City Name" spellcheck="false">
+        <button><img src="images/search.png"></button>
+    </div>
+
+    <div class="error">
+        <p>Invalid City Name</p>
+    </div>
+
+    <div class="weather">
+        <img src="images/rain.png" class="weather-icon">
+
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">New York</h2>
+
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png">
+                <div>
+                    <p class="humidity">50%</p>
+                    <span>Humidity</span>
+                </div>
+            </div>
+
+            <div class="col">
+                <img src="images/wind.png">
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <span>Wind Speed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast">
+        <h3>Next Hours</h3>
+        <div class="forecast-container" id="forecast"></div>
+    </div>
+
+</div>
+
+<script>
+
+const apiKey = "482859021b136e0d55ec7cd666d2c049";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const weatherIcon = document.querySelector(".weather-icon");
+
+async function checkWeather(city) {
+
+    if(city.trim() === "") return;
+
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+    if(response.status == 404) {
+        document.querySelector(".error").style.display = "block";
+        document.querySelector(".weather").style.display = "none";
+        document.querySelector(".forecast").style.display = "none";
+    }
+    else {
+        
+    var data = await response.json();
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+    if(data.weather[0].main == "Clouds") {
+        weatherIcon.src = "images/clouds.png";
+    }
+    else if(data.weather[0].main == "Clear") {
+        weatherIcon.src = "images/clear.png";
+    }
+    else if(data.weather[0].main == "Rain") {
+        weatherIcon.src = "images/rain.png";
+    }
+    else if(data.weather[0].main == "Drizzle") {
+        weatherIcon.src = "images/drizzle.png";
+    }
+    else if(data.weather[0].main == "Mist") {
+        weatherIcon.src = "images/mist.png";
+    }
+
+    document.querySelector(".weather").style.display = "block";
+    document.querySelector(".error").style.display = "none";
+
+    getForecast(city);
+    }
+}
+
+async function getForecast(city) {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const forecastContainer = document.getElementById("forecast");
+    forecastContainer.innerHTML = "";
+
+    for (let i = 0; i < 6; i++) {
+        const item = data.list[i];
+
+        const time = new Date(item.dt_txt).getHours();
+        const temp = Math.round(item.main.temp);
+        const icon = item.weather[0].main;
+
+        let iconFile = "clear.png";
+
+        if(icon == "Clouds") iconFile = "clouds.png";
+        else if(icon == "Rain") iconFile = "rain.png";
+        else if(icon == "Drizzle") iconFile = "drizzle.png";
+        else if(icon == "Mist") iconFile = "mist.png";
+
+        const card = document.createElement("div");
+        card.classList.add("forecast-card");
+
+        card.innerHTML = `
+            <p>${time}:00</p>
+            <img src="images/${iconFile}">
+            <p>${temp}°C</p>
+        `;
+
+        forecastContainer.appendChild(card);
+    }
+
+    document.querySelector(".forecast").style.display = "block";
+}
+
+searchBtn.addEventListener("click", () => {
+    if (searchBox.value.trim() !== "") {
+        checkWeather(searchBox.value);
+    }
+});
+
+searchBox.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        checkWeather(searchBox.value);
+    }
+});
+
+</script>
+
+</body>
+</html>
+
