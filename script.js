@@ -1,4 +1,11 @@
-const API_KEY = "YOUR_API_KEY";
+let API_KEY = localStorage.getItem("weather_api_key");
+
+if (!API_KEY) {
+  API_KEY = prompt("Enter your OpenWeather API Key:");
+  if (API_KEY) {
+    localStorage.setItem("weather_api_key", API_KEY);
+  }
+}
 const BASE    = "https://api.openweathermap.org/data/2.5";
 
 // — DOM refs —
