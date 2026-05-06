@@ -66,16 +66,20 @@ nimbus-weather-app/
 This project uses the OpenWeather API.
 
 ⚠️ **Important:**
-For security reasons, API keys should not be exposed in public repositories.
+For security reasons, API keys are not stored in the code.
 
-### Steps:
+### How it works:
+
+* When you open the app, you will be prompted to enter your OpenWeather API key
+* The key is stored securely in your browser (localStorage)
+* You only need to enter it once
+
+### Steps to use:
 
 1. Get your API key from: https://openweathermap.org/api
-2. Replace this line in `script.js`:
+2. Open the app
+3. Enter your API key when prompted
 
-```js
-const API_KEY = "YOUR_API_KEY";
-```
 
 ---
 
