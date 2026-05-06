@@ -1,100 +1,121 @@
 # 🌦️ Nimbus Weather App
 
-A modern, aesthetic weather application built using vanilla HTML, CSS, and JavaScript with real-time weather data, smooth UI animations, and responsive design.
+![Status](https://img.shields.io/badge/Status-Live-success)
 
-> Designed with a premium “glass + aurora + neon” UI feel for a futuristic weather experience.
+A modern, aesthetic weather application built using **HTML, CSS, and JavaScript**, delivering real-time weather data with a smooth, immersive UI.
 
----
-
-## ✨ Live Demo
-Add your Vercel/GitHub Pages link here after deploy
+Designed with a **glassmorphism + aurora + neon** interface to create a premium user experience.
+Built to demonstrate strong frontend fundamentals, API integration, and UI/UX design skills.
 
 ---
 
-## 🚀 Features
+## 🔗 Live Demo
 
-- Search weather by city
-- Auto-detect location (Geolocation API)
-- Real-time temperature & feels-like data
-- Wind speed, humidity, pressure, visibility
-- Sunrise & Sunset timing
-- Live clock updates
-- Hourly weather forecast (24h)
-- 5-day forecast view
-- Dynamic UI glow based on weather condition
-- Animated aurora background
-- Fully responsive design
-- Loading skeleton UI
+🚀 [Live Demo](https://nimbus-weather-app-tan.vercel.app/)
+
+💻 [GitHub Repository](https://github.com/siddhipawar424/nimbus-weather-app)
 
 ---
 
-## 🧠 Tech Stack
+## 📸 Preview
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- OpenWeather API
-- Geolocation API
+![Nimbus Weather App](./assets/preview.png)
+
+---
+
+## ✨ Features
+
+* 🌍 Search weather by city
+* 📍 Auto-detect user location (Geolocation API)
+* 🌡 Real-time temperature & “feels like” data
+* 💨 Wind speed, humidity, pressure, visibility
+* 🌅 Sunrise & sunset timings
+* ⏰ Live clock updates
+* 📊 Hourly forecast (next 24 hours)
+* 📅 5-day weather forecast
+* 🎨 Dynamic UI based on weather conditions
+* ⚡ Smooth animations & glassmorphism design
+* 📱 Fully responsive (mobile + desktop)
+
+---
+
+## 🛠 Tech Stack
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* OpenWeather API
+* Geolocation API
 
 ---
 
 ## 📂 Project Structure
 
+```
 nimbus-weather-app/
 ├── index.html
 ├── style.css
 ├── script.js
 └── assets/
+```
 
 ---
 
-## 🔑 API Used
+## 🔑 API Setup
 
-OpenWeatherMap API  
-https://openweathermap.org/api
+This project uses the OpenWeather API.
+
+⚠️ **Important:**
+For security reasons, API keys should not be exposed in public repositories.
+
+### Steps:
+
+1. Get your API key from: https://openweathermap.org/api
+2. Replace this line in `script.js`:
+
+```js
+const API_KEY = "YOUR_API_KEY";
+```
 
 ---
 
-## ⚙️ Run Locally
+## 🚀 Run Locally
 
-git clone https://github.com/siddhipawar424/weather-app.git
-cd nimbus-weather
+```bash
+git clone https://github.com/siddhipawar424/nimbus-weather-app.git
+cd nimbus-weather-app
 open index.html
+```
 
 ---
 
 ## 🌐 Deployment
 
-Vercel / GitHub Pages / Netlify
+This project is deployed using **Vercel**.
+
+You can also deploy it on:
+
+* GitHub Pages
+* Netlify
 
 ---
 
-## 🎨 UI Highlights
+## 🚧 Future Improvements
 
-- Aurora background animation
-- Glassmorphism UI
-- Smooth hover effects
-- Floating weather icons
-- Responsive mobile design
-
----
-
-## 📌 Future Improvements
-
-- Dark/Light mode
-- Weather charts
-- Alerts system
-- Offline support
-- Multi-language support
+* 🌙 Dark / Light mode toggle
+* 📊 Weather charts & analytics
+* 🔔 Weather alerts system
+* 🌐 Multi-language support
+* 📡 Offline support (PWA)
 
 ---
 
-## 👨‍💻 Author
+## 👩‍💻 Author
 
-Siddhi Pawar
+**Siddhi Pawar**
 
 ---
 
 ## ⭐ Support
 
-Star the repo if you like it!
+If you found this project useful or interesting, consider giving it a ⭐ on GitHub!
