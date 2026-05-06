@@ -1,7 +1,3 @@
-/* ========================================
-   NIMBUS WEATHER APP — script.js
-   ======================================== */
-
 const API_KEY = "482859021b136e0d55ec7cd666d2c049";
 const BASE    = "https://api.openweathermap.org/data/2.5";
 
@@ -182,7 +178,7 @@ async function fetchWeather(city) {
     weatherCard.classList.add("visible");
 
   } catch (err) {
-    console.error(err); // ✅ no-empty fix
+    console.error(err); 
     setLoading(false);
     hint.style.display = "block";
     showError("Something went wrong.");
@@ -213,11 +209,11 @@ if ("geolocation" in navigator) {
         searchInput.value = data.name;
         fetchWeather(data.name);
       } catch (err) {
-        console.error("Geolocation fetch failed:", err); // ✅ fixed
+        console.error("Geolocation fetch failed:", err); 
       }
     },
     () => {
-      console.warn("Geolocation permission denied"); // ✅ fixed
+      console.warn("Geolocation permission denied"); 
     }
   );
 }
