@@ -1,4 +1,4 @@
-# 🌦️ Nimbus Weather App
+# Nimbus Weather App
 
 ![Status](https://img.shields.io/badge/Status-Live-success)
 
@@ -9,37 +9,37 @@ Built to demonstrate strong frontend fundamentals, API integration, and UI/UX de
 
 ---
 
-## 🔗 Live Demo
+## Live Demo
 
-🚀 [Live Demo](https://nimbus-weather-app-tan.vercel.app/)
+[Live Demo](https://nimbus-weather-app-tan.vercel.app/)
 
-💻 [GitHub Repository](https://github.com/siddhipawar424/nimbus-weather-app)
+[GitHub Repository](https://github.com/siddhipawar424/nimbus-weather-app)
 
 ---
 
-## 📸 Preview
+## Preview
 
 ![Nimbus Weather App](./assets/preview.png)
 
 ---
 
-## ✨ Features
+## Features
 
-* 🌍 Search weather by city
-* 📍 Auto-detect user location (Geolocation API)
-* 🌡 Real-time temperature & “feels like” data
-* 💨 Wind speed, humidity, pressure, visibility
-* 🌅 Sunrise & sunset timings
-* ⏰ Live clock updates
-* 📊 Hourly forecast (next 24 hours)
-* 📅 5-day weather forecast
-* 🎨 Dynamic UI based on weather conditions
-* ⚡ Smooth animations & glassmorphism design
-* 📱 Fully responsive (mobile + desktop)
+* Search weather by city
+* Auto-detect user location (Geolocation API)
+* Real-time temperature & “feels like” data
+* Wind speed, humidity, pressure, visibility
+* Sunrise & sunset timings
+* Live clock updates
+* Hourly forecast (next 24 hours)
+* 5-day weather forecast
+* Dynamic UI based on weather conditions
+* Smooth animations & glassmorphism design
+* Fully responsive (mobile + desktop)
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * HTML5
 * CSS3
@@ -49,23 +49,11 @@ Built to demonstrate strong frontend fundamentals, API integration, and UI/UX de
 
 ---
 
-## 📂 Project Structure
-
-```
-nimbus-weather-app/
-├── index.html
-├── style.css
-├── script.js
-└── assets/
-```
-
----
-
-## 🔑 API Setup
+## API Setup
 
 This project uses the OpenWeather API.
 
-⚠️ **Important:**
+**Important:**
 For security reasons, API keys are not stored in the code.
 
 ### How it works:
@@ -83,7 +71,7 @@ For security reasons, API keys are not stored in the code.
 
 ---
 
-## 🚀 Run Locally
+## Run Locally
 
 ```bash
 git clone https://github.com/siddhipawar424/nimbus-weather-app.git
@@ -93,7 +81,7 @@ open index.html
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 This project is deployed using **Vercel**.
 
@@ -104,22 +92,22 @@ You can also deploy it on:
 
 ---
 
-## 🚧 Future Improvements
+## Future Improvements
 
-* 🌙 Dark / Light mode toggle
-* 📊 Weather charts & analytics
-* 🔔 Weather alerts system
-* 🌐 Multi-language support
-* 📡 Offline support (PWA)
+* Dark / Light mode toggle
+* Weather charts & analytics
+* Weather alerts system
+* Multi-language support
+* Offline support (PWA)
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Siddhi Pawar**
 
 ---
 
-## ⭐ Support
+## Support
 
 If you found this project useful or interesting, consider giving it a ⭐ on GitHub!
